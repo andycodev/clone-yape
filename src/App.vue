@@ -62,7 +62,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
       <div v-if="generate && monto != 0" class="items-center bg-fuchsia-800 mt-4 rounded text-white text-sm font-normal px-4 py-3 text-left" role="alert">
         <p class="font-semibold sm:text-xs">Importante</p>
-        <p class="font-normal sm:text-xs">Pude editar los valores, sin necesidad de generar un nuevo yapeo.</p>
+        <p class="font-normal sm:text-xs">Puede editar los valores, sin necesidad de generar un nuevo yapeo.</p>
       </div>
 
     </div>
@@ -71,9 +71,17 @@ import HelloWorld from "./components/HelloWorld.vue";
   <hr>
 
   <div class="justify-center items-center h-screen sm:w-1/5 mx-auto bg-[#742384]">
-    <div class="bg-gradient-to-t from-[#742384] to-purple-900">
-      <img src="/src/assets/icons/cruzar.png" alt="cerrar" class="w-4 float-left mt-8 ml-5">
-      <img src="/src/assets/images/yape.png" alt="logo" class="-mt-10" />
+    <!-- <div class="bg-gradient-to-t from-[#742384] to-purple-900"> -->
+      <!-- <img src="/src/assets/icons/cruzar.png" alt="cerrar" class="w-4 float-left mt-8 ml-5 bg-yellow-300">
+      <img src="/src/assets/images/yape.png" alt="logo" class="-mt-16 bg-gray-400" /> -->
+    <!-- </div> -->
+    <div class="grid grid-cols-12 justify-center mx-auto text-center bg-gradient-to-t from-[#742384] to-purple-900">
+      <div class="col-span-1 float-left">
+        <img src="/src/assets/icons/cruzar.png" alt="cerrar" class="w-3 float-left mt-8 ml-5">
+      </div>
+      <div class="col-span-12 text-center mx-auto mt-16">
+        <img src="/src/assets/images/yape.png" alt="logo" class="-mt-16"/>
+      </div>
     </div>
 
     <div class="border-top mx-auto mt-0 w-9/12"></div>
