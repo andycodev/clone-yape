@@ -5,8 +5,8 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <div class="justify-center h-screen items-center sm:w-1/5 mx-auto mb-5">
-    <div class="bg-white text-center w-9/12 mx-auto">
+  <div class="justify-center h-screen items-center sm:w-1/5 mx-auto  bg-gray-50">
+    <div class="bg-gray-50 text-center w-9/12 mx-auto">
       <div class="p-4">
         <p class="font-medium">Yapear a</p>
 
@@ -37,7 +37,7 @@ import HelloWorld from "./components/HelloWorld.vue";
           Yapear
         </button>
 
-        <button v-else class="bg-[#10cbb4] rounded m-4 text-center w-full py-3 text-white mt-5 mx-auto font-medium"
+        <button v-else class="bg-[#10cbb4] rounded m-4 text-center w-full py-3 text-white mt-3 mx-auto font-medium"
           @click="clearVoucher()" :disabled="monto === '' || monto === '0' || nombres === ''"
           :class="[(monto === '' || monto < 0.10 || nombres === '') ? 'bg-gray-300' : '']">
           Nuevo yapeo
@@ -60,7 +60,9 @@ import HelloWorld from "./components/HelloWorld.vue";
         </div>
       </div>
 
-      <div v-if="generate && monto != 0" class="items-center bg-fuchsia-800 mt-4 rounded text-white text-sm font-normal px-4 py-3 text-left" role="alert">
+      <div v-if="generate && monto != 0"
+        class="items-center bg-fuchsia-800 mt-2 rounded text-white text-sm font-normal px-4 py-3 text-left"
+        role="alert">
         <p class="font-semibold sm:text-xs">Importante</p>
         <p class="font-normal sm:text-xs">Puede editar los valores, sin necesidad de generar un nuevo yapeo.</p>
       </div>
@@ -72,7 +74,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
   <div class="justify-center items-center h-screen sm:w-1/5 mx-auto bg-[#742384]">
     <!-- <div class="bg-gradient-to-t from-[#742384] to-purple-900"> -->
-      <!-- <img src="/src/assets/icons/cruzar.png" alt="cerrar" class="w-4 float-left mt-8 ml-5 bg-yellow-300">
+    <!-- <img src="/src/assets/icons/cruzar.png" alt="cerrar" class="w-4 float-left mt-8 ml-5 bg-yellow-300">
       <img src="/src/assets/images/yape.png" alt="logo" class="-mt-16 bg-gray-400" /> -->
     <!-- </div> -->
     <div class="grid grid-cols-12 justify-center mx-auto text-center bg-gradient-to-t from-[#742384] to-purple-900">
@@ -80,7 +82,7 @@ import HelloWorld from "./components/HelloWorld.vue";
         <img src="/src/assets/icons/cruzar.png" alt="cerrar" class="w-3 float-left mt-8 ml-5">
       </div>
       <div class="col-span-12 text-center mx-auto mt-16">
-        <img src="/src/assets/images/yape.png" alt="logo" class="-mt-16"/>
+        <img src="/src/assets/images/yape.png" alt="logo" class="-mt-16" />
       </div>
     </div>
 
