@@ -30,18 +30,23 @@ import HelloWorld from "./components/HelloWorld.vue";
       </div>
 
       <div class="p-1">
-        <button v-if="!generate" class="bg-[#10cbb4] rounded m-4 text-center w-full py-3 text-white mt-5 mx-auto font-medium" @click="generateVoucher()"
-          :disabled="monto === '' || monto === '0' || nombres === ''" :class="[(monto === '' || monto < 0.10 ||  nombres === '') ? 'bg-gray-300' : '']">
+        <button v-if="!generate"
+          class="bg-[#10cbb4] rounded m-4 text-center w-full py-3 text-white mt-5 mx-auto font-medium"
+          @click="generateVoucher()" :disabled="monto === '' || monto === '0' || nombres === ''"
+          :class="[(monto === '' || monto < 0.10 || nombres === '') ? 'bg-gray-300' : '']">
           Yapear
         </button>
 
-        <button v-else class="bg-[#10cbb4] rounded m-4 text-center w-full py-3 text-white mt-5 mx-auto font-medium" @click="clearVoucher()"
-          :disabled="monto === '' || monto === '0' || nombres === ''" :class="[(monto === '' || monto < 0.10 ||  nombres === '') ? 'bg-gray-300' : '']">
+        <button v-else class="bg-[#10cbb4] rounded m-4 text-center w-full py-3 text-white mt-5 mx-auto font-medium"
+          @click="clearVoucher()" :disabled="monto === '' || monto === '0' || nombres === ''"
+          :class="[(monto === '' || monto < 0.10 || nombres === '') ? 'bg-gray-300' : '']">
           Nuevo yapeo
         </button>
       </div>
 
-      <div v-if="generate && monto!=0" class="bg-teal-100 text-left border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+      <div v-if="generate && monto != 0"
+        class="bg-teal-100 text-left border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+        role="alert">
         <div class="flex">
           <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20">
@@ -53,6 +58,11 @@ import HelloWorld from "./components/HelloWorld.vue";
             <p class="text-sm sm:text-xs">Po favor, deslice hacia abajo para visualizar el voucher 😎.</p>
           </div>
         </div>
+      </div>
+
+      <div v-if="generate && monto != 0" class="items-center bg-fuchsia-800 mt-4 rounded text-white text-sm font-normal px-4 py-3 text-left" role="alert">
+        <p class="font-semibold sm:text-xs">Importante</p>
+        <p class="font-normal sm:text-xs">Pude editar los valores, sin necesidad de generar un nuevo yapeo.</p>
       </div>
 
     </div>
